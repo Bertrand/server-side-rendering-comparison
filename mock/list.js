@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Array.from({ length: 100})
+module.exports = Array.from({ length: 370})
                       .map((undef, i) => {
                         return {
                           title: 'Product title ' + i,

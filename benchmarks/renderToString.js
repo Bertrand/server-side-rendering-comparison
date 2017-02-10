@@ -6,21 +6,22 @@
 
 const Benchmark = require('benchmark');
 
+
+
 const Rax = require('rax');
 const raxRenderToString = require('rax-server-renderer').renderToString;
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
+const React = require('../assets/build/server.react.bundle').react
+const ReactDOMServer = require('../assets/build/server.react.bundle').dom_react_server
 const Vue = require('vue');
 const vueRenderToString = require('vue-server-renderer').createRenderer().renderToString;
 const Preact = require('preact');
 const preactRenderToString = require('preact-render-to-string');
 
 
-const ReactApp = require('../assets/build/server.react.bundle').default;
+const ReactApp = require('../assets/build/server.react.bundle').react_app;
 const RaxApp = require('../assets/build/server.rax.bundle').default;
 const VueApp = require('../assets/build/server.vue.bundle').default;
 const PreactApp = require('../assets/build/server.preact.bundle').default;
-
 
 const data = {
   listData: require('../mock/list'),
